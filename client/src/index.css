@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    @apply h-screen w-screen overflow-hidden;
+  }
+  body {
+    @apply bg-[#F8FAFC] text-slate-950 font-sans antialiased select-none;
+  }
+}
+
+@layer components {
+  .app-card {
+    @apply bg-white border border-slate-200 rounded-xl shadow-sm transition-all hover:shadow-md;
+  }
+
+  /* Custom Native Scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-slate-200 rounded-full border-4 border-transparent bg-clip-padding hover:bg-slate-300;
+  }
+}
+
+/* Application Animations */
+.page-transition {
+  @apply transition-all duration-300 ease-out;
+}
